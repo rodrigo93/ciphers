@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.13)  15 MAR 2017 22:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.13)  18 MAR 2017 17:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1138,33 +1138,73 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 165.
- [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 168.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 168.
+<Imagens/cesar.png, id=4, 859.21pt x 362.35374pt>
+File: Imagens/cesar.png Graphic file (type png)
+ <use Imagens/cesar.png>
+Package pdftex.def Info: Imagens/cesar.png used on input line 173.
+(pdftex.def)             Requested size: 298.1987pt x 125.75859pt.
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Imagens/cesar.png>]
+<Imagens/playfair.png, id=26, 357.335pt x 268.00125pt>
+File: Imagens/playfair.png Graphic file (type png)
+
+<use Imagens/playfair.png>
+Package pdftex.def Info: Imagens/playfair.png used on input line 218.
+(pdftex.def)             Requested size: 213.0pt x 159.751pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[2] <Imagens/vinegere.png, id=40, 604.2575pt x 602.25pt>
+File: Imagens/vinegere.png Graphic file (type png)
+
+<use Imagens/vinegere.png>
+Package pdftex.def Info: Imagens/vinegere.png used on input line 229.
+(pdftex.def)             Requested size: 298.1987pt x 297.20949pt.
+ [3 <./Imagens/playfair.png> <./Imagens/vinegere.png>] <Imagens/vinegere2.png, 
+id=48, 653.44125pt x 265.74281pt>
+File: Imagens/vinegere2.png Graphic file (type png)
+
+<use Imagens/vinegere2.png>
+Package pdftex.def Info: Imagens/vinegere2.png used on input line 239.
+(pdftex.def)             Requested size: 298.1987pt x 121.26999pt.
+
+<Imagens/vinegere3.png, id=50, 651.18282pt x 261.22594pt>
+File: Imagens/vinegere3.png Graphic file (type png)
+
+<use Imagens/vinegere3.png>
+Package pdftex.def Info: Imagens/vinegere3.png used on input line 248.
+(pdftex.def)             Requested size: 298.1987pt x 119.62727pt.
+ [4 <./Imagens/vinegere2.png> <./Imagens/vinegere3.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 255.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 255.
  (./MateusRissi_RodrigoMarques_Relatorio.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 168.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 168.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 168.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 255.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 255.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 255.
  ) 
 Here is how much of TeX's memory you used:
- 12711 strings out of 493029
- 188486 string characters out of 6136234
- 441268 words of memory out of 5000000
- 16067 multiletter control sequences out of 15000+600000
- 34129 words of font info for 41 fonts, out of 8000000 for 9000
+ 12831 strings out of 493029
+ 190109 string characters out of 6136234
+ 446820 words of memory out of 5000000
+ 16120 multiletter control sequences out of 15000+600000
+ 43235 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,11n,35p,273b,348s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,11n,35p,664b,476s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/
-public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/sha
-re/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/l
-m/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso12.pfb>
-Output written on MateusRissi_RodrigoMarques_Relatorio.pdf (1 page, 112052 byte
-s).
+public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/sh
+are/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/
+lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/tex
+mf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lms
+s12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso12.pfb>
+Output written on MateusRissi_RodrigoMarques_Relatorio.pdf (4 pages, 919454 byt
+es).
 PDF statistics:
- 35 PDF objects out of 1000 (max. 8388607)
- 26 compressed objects within 1 object stream
- 3 named destinations out of 1000 (max. 500000)
- 10753 words of extra memory for PDF output out of 12000 (max. 10000000)
+ 102 PDF objects out of 1000 (max. 8388607)
+ 79 compressed objects within 1 object stream
+ 21 named destinations out of 1000 (max. 500000)
+ 13362 words of extra memory for PDF output out of 14400 (max. 10000000)
 
