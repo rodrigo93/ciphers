@@ -1,4 +1,4 @@
-#TODO LIST:
+#TODO LIST
 
 Uma descrição dos algoritmos:
 
@@ -8,7 +8,7 @@ Uma descrição dos algoritmos:
 
 Implementação dos algoritmos para cifrar e decifrar (Qualquer linguagem):
 
-- [ ] Cifra de César
+- [OK] Cifra de César
 - [ ] Playfair
 - [ ] Viginère
 
