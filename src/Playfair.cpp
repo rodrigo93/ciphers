@@ -19,17 +19,17 @@ std::string Playfair::cifra(std::vector<char> msg){
 		buscaPosicaoLetra(mensagem[h], linha1, coluna1);
 		buscaPosicaoLetra(mensagem[h+1], linha2, coluna2);
 
-		if (linha1 == linha2){
-			msgCifrada += getChar(linha1, coluna2 + 1);
+		if (linha1 == linha2){	//Regra linha
+			msgCifrada += getChar(linha1, coluna1 + 1);
 			msgCifrada += getChar(linha2, coluna2 + 1);
 		}
 
-		else if (coluna1 == coluna2){
+		else if (coluna1 == coluna2){ //Regra coluna
 			msgCifrada += getChar(linha1 + 1, coluna1);
 			msgCifrada += getChar(linha2 + 1, coluna1);
 		}
 
-		else{
+		else{ //Regra retangulo
 			msgCifrada += getChar(linha1, coluna2);
 			msgCifrada += getChar(linha2, coluna1);
 		}
@@ -50,7 +50,7 @@ std::string Playfair::decifra(std::vector<char> msg){
 		buscaPosicaoLetra(mensagem[h+1], linha2, coluna2);
 
 		if (linha1 == linha2){
-			msgCifrada += getChar(linha1, coluna2 - 1);
+			msgCifrada += getChar(linha1, coluna1 - 1);
 			msgCifrada += getChar(linha2, coluna2 - 1);
 		}
 
@@ -93,14 +93,12 @@ std::string Playfair::preparaMensagem(std::string msg){
 	int testfillz = 0;
 
 	for (int i = 0; i < msg.length(); i++){
-
 		if (msg[i] == ' ')		//remove espaços.
 			msg.erase(i, 1);
 	}
 
 
 	for (int i = 0; i < msg.length(); i++){
-
 		if (msg[i] == 'q')
 			testfillq = 1;
 		if (msg[i] == 'x')
@@ -117,9 +115,7 @@ std::string Playfair::preparaMensagem(std::string msg){
 		filler = 'q';
 
 	for (int i = 0; i < msg.length(); i+=2){
-
 		mesAux += msg[i];
-
 			if (i + 1 < msg.length())
 			{
 				if (msg[i] == msg[i + 1])

@@ -45,14 +45,12 @@ private:
  * Cifrar:
  * - Retângulo: troca pelos das pontas opostas;
  * - Coluna: troca pelo de baixo;
- * - Linha: troca pelo da direita, quando não der,
- * 			troca pelo da esquerda;
+ * - Linha: troca pelo da direita.
  *
  * Decifrar
  * - Retângulo: troca pelos das pontas opostas;
  * - Coluna: troca pelo de cima;
- * - Linha: troca pelo da esquerda, quando não der,
- * 			troca pelo da direita;
+ * - Linha: troca pelo da esquerda.
  */
 
 /*

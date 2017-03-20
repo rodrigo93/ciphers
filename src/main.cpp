@@ -21,13 +21,11 @@ Auxiliar * auxiliar = new Auxiliar();
 
 int main(int argc, char **argv) {
 	//Cesar
+	std::cout<< "" << std::endl;
 	std::cout << "Cifra de Cesar:" << std::endl;
 	std::cout << "Numero de casa de deslocamento: " << cesar->getDeslocamento() << std::endl;
-	std::cout << "Nomes a serem Cifrados:" << std::endl;
 	std::string mtCesar = "MATEUS";
 	std::string rdCesar = "RODRIGO";
-	std::cout << mtCesar << std::endl;
-	std::cout << rdCesar << std::endl;
 
 	std::string mtCesarCifrado = cesar->cifra(mtCesar);
 	std::string rdCesarCifrado = cesar->cifra(rdCesar);
@@ -44,6 +42,7 @@ int main(int argc, char **argv) {
 	std::cout << rdCesarDecifrado << std::endl;
 
 	//PlayFair
+	std::cout<< "" << std::endl;
 	std::cout << "PlayFair:" << std::endl;
 	std::string mtPlayFair = "MATEUS";
 	std::string rdPlayFair = "RODRIGO";
@@ -59,7 +58,7 @@ int main(int argc, char **argv) {
 	std::cout << mtPlayFair << " Cifrada:" << std::endl;
 	std::cout << mtCifrada << std::endl;
 
-	std::string rdCifrada = playfair->cifra(mtAuxVec);
+	std::string rdCifrada = playfair->cifra(rdAuxVec);
 	std::cout << rdPlayFair << " Cifrada:" << std::endl;
 	std::cout << rdCifrada << std::endl;
 
@@ -74,6 +73,7 @@ int main(int argc, char **argv) {
 	std::cout << rdDecifrada << std::endl;
 
 	//Vigenere
+	std::cout<< "" << std::endl;
 	std::cout << "Vigenere:" << std::endl;
 	std::string key = "SKYHILL";
 	std::string mt = "MATEUS";
@@ -85,13 +85,11 @@ int main(int argc, char **argv) {
 	std::string mtDecrypted = vinegere->decifra(mtEncrypted);
 	std::string rdDecrypted = vinegere->decifra(rdEncrypted);
 
-	std::cout << "Chave usada: "<<key << std::endl;
-	std::cout << mt << std::endl;
-	std::cout << "Mateus Encrypted: " << mtEncrypted << std::endl;
-	std::cout << "Mateus Decrypted: " << mtDecrypted << std::endl;
-	std::cout << rd << std::endl;
-	std::cout << "Rodrigo Encrypted: " << rdEncrypted << std::endl;
-	std::cout << "Rodrigo Decrypted: " << rdDecrypted << std::endl;
+	std::cout << "Chave usada: "<< key << std::endl;
+	std::cout << mt << " Encrypted: " << mtEncrypted << std::endl;
+	std::cout << mtEncrypted << " Decrypted: " << mtDecrypted << std::endl;
+	std::cout << rd << " Encrypted: " << rdEncrypted << std::endl;
+	std::cout << rdEncrypted << " Decrypted: " << rdDecrypted << std::endl;
 	return 0;
 }
 
