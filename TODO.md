@@ -19,8 +19,8 @@ Cifra de César:
 - [ ] Resultado da cifra do primeiro nome de cada aluno do grupo.
 
 PlayFair:
-- [ ] Chave utilizada (Pode-se escolher qualquer chave desde que siga as regras do algoritmo)
-- [ ] Letras retiradas ou combinadas
+- [ ] Chave utilizada (Pode-se escolher qualquer chave desde que siga as regras do algoritmo) = COMPUTACAO;
+- [ ] Letras retiradas ou combinadas = I=J;
 - [ ] Resultado da cifra do primeiro nome de cada aluno do grupo.
 
 Vigenère:
