@@ -8,81 +8,131 @@
 #include "../include/Playfair.hpp"
 
 
-void Playfair::cifra(std::vector<char> mensagem){
-    std::vector<char> aux;
-    int tamMsg = mensagem.size();
+std::string Playfair::cifra(std::vector<char> msg){
+	std::vector<char> mensagem = msg;
+	std::string msgCifrada = "";
 
-    int i = 0;
-    int r1, c1, r2, c2;
-    while (i < tamMsg){
-    	buscaPosicaoLetra(mensagem[i], r1, c1);
-        i++;
-        buscaPosicaoLetra(mensagem[i], r2, c2);
-        if (r1 == r2){
-        	linha(r1, aux, c1, c2);
-        }
-        else if (c1 == c2){
-        	coluna(c1, aux, r1, r2);
-        }
-        else{
-        	retangulo(r1, c1, aux, r2, c2);
-        }
-        i++;
-    }
+    int h = 0;
+    int linha1 = 0, coluna1 = 0, linha2 = 0, coluna2 = 0;
 
-    return;
+	for (h = 0; h < mensagem.size(); h += 2){
+		buscaPosicaoLetra(mensagem[h], linha1, coluna1);
+		buscaPosicaoLetra(mensagem[h+1], linha2, coluna2);
+
+		if (linha1 == linha2){
+			msgCifrada += getChar(linha1, coluna2 + 1);
+			msgCifrada += getChar(linha2, coluna2 + 1);
+		}
+
+		else if (coluna1 == coluna2){
+			msgCifrada += getChar(linha1 + 1, coluna1);
+			msgCifrada += getChar(linha2 + 1, coluna1);
+		}
+
+		else{
+			msgCifrada += getChar(linha1, coluna2);
+			msgCifrada += getChar(linha2, coluna1);
+		}
+	}
+
+    return msgCifrada;
 }
 
-void Playfair::decifra(std::string mensagem){
+std::string Playfair::decifra(std::vector<char> msg){
+	std::vector<char> mensagem = msg;
+	std::string msgCifrada = "";
 
-	return;
+    int h = 0;
+    int linha1 = 0, coluna1 = 0, linha2 = 0, coluna2 = 0;
+
+	for (h = 0; h < mensagem.size(); h += 2){
+		buscaPosicaoLetra(mensagem[h], linha1, coluna1);
+		buscaPosicaoLetra(mensagem[h+1], linha2, coluna2);
+
+		if (linha1 == linha2){
+			msgCifrada += getChar(linha1, coluna2 - 1);
+			msgCifrada += getChar(linha2, coluna2 - 1);
+		}
+
+		else if (coluna1 == coluna2){
+			msgCifrada += getChar(linha1 - 1, coluna1);
+			msgCifrada += getChar(linha2 - 1, coluna1);
+		}
+
+		else{
+			msgCifrada += getChar(linha1, coluna2);
+			msgCifrada += getChar(linha2, coluna1);
+		}
+	}
+
+    return msgCifrada;
 }
 
-void Playfair::retangulo(int linha1, int coluna1, std::vector<char>& mensagem, int linha2, int coluna2){
-	mensagem.push_back(_chave[linha1][coluna2]);
-	mensagem.push_back(_chave[linha2][coluna1]);
-	return;
+
+void Playfair::buscaPosicaoLetra(char letra, int& linha, int& coluna){
+	for (int i = 0; i < 5; i++)	{
+		for (int j = 0; j < 5; j++){
+			if (_chave[i][j] == letra){
+				linha = i;
+				coluna = j;
+			}
+		}
+	}
 }
 
-void Playfair::linha(int linha, std::vector<char>& mensagem, int coluna1, int coluna2){
-	mensagem.push_back(_chave[linha][(coluna1 + 4) % 5]);
-	mensagem.push_back(_chave[linha][(coluna2 + 4) % 5]);
-    return;
+char Playfair::getChar(int row, int column)
+{
+	return _chave[(row + 5) % 5][(column + 5) % 5];
 }
 
-void Playfair::coluna(int coluna, std::vector<char>& mensagem, int linha1, int linha2){
-	mensagem.push_back(_chave[(linha1 + 4) % 5][coluna]);
-	mensagem.push_back(_chave[(linha2 + 4) % 5][coluna]);
-    return;
-}
+std::string Playfair::preparaMensagem(std::string msg){
+	std::string mesAux;
+	char filler;
+	int testfillq = 0;
+	int testfillx = 0;
+	int testfillz = 0;
 
-void buscaPosicaoLetra(char letra, int& linha, int& coluna){
-    if (letra < 'J')
-    {
-    	linha = (letra - 65) / 5;
-    	coluna = (letra - 65) % 5;
-    }
-    else if (letra > 'J')
-    {
-    	linha = (letra - 66) / 5;
-    	coluna = (letra - 66) % 5;
-    }
-    return;
-}
+	for (int i = 0; i < msg.length(); i++){
 
-void Playfair::pedeMensagem(std::vector<char>& mensagem){
-    char letra;
-    while (1) {
-    	letra=getchar();
-        if (letra >= 97 && letra <= 122)
-        	letra -= 32;
-        if (letra == '\n')
-            break;
-        else if (letra==' ')
-            continue;
-        else if (letra == 'J')
-        mensagem.push_back('I');
-        mensagem.push_back(letra);
-    }
-    return;
+		if (msg[i] == ' ')		//remove espaços.
+			msg.erase(i, 1);
+	}
+
+
+	for (int i = 0; i < msg.length(); i++){
+
+		if (msg[i] == 'q')
+			testfillq = 1;
+		if (msg[i] == 'x')
+			testfillx = 1;
+        if (msg[i] == 'z')
+			testfillz = 1;
+	}
+
+	if (testfillx == 0)
+		filler = 'x';
+	else if (testfillz == 0)
+		filler = 'z';
+	else if (testfillq == 0)
+		filler = 'q';
+
+	for (int i = 0; i < msg.length(); i+=2){
+
+		mesAux += msg[i];
+
+			if (i + 1 < msg.length())
+			{
+				if (msg[i] == msg[i + 1])
+				{
+					mesAux += filler;
+				}
+				mesAux += msg[i + 1];
+			}
+		}
+
+	if (mesAux.length() % 2 == 1)
+		mesAux += filler;
+
+	msg = mesAux;
+	return msg;
 }
