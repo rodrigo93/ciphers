@@ -20,6 +20,7 @@ public:
 	std::string decifra(std::string mensagem);
 
 	void setMover(int moveAux);
+	int getDeslocamento();
 
 
 private:

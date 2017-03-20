@@ -38,3 +38,7 @@ std::string Cifradorcesar::decifra(std::string mensagem){
 
 	return temp;
 }
+
+int Cifradorcesar::getDeslocamento(){
+	return mover;
+}
